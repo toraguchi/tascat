@@ -8,61 +8,65 @@ const GOOGLE_MAPS_API_KEY = "AIzaSyA0hj5yFG-9OZwWcL6o0RYYieGIlax0RMw";
 const companies = [
     {
         name: "丸松産業",
-        phone:"09074042984",
+        phone:"0484782000",
         hours:"8:30〜16:30",
         rate: "混廃 ¥65〜/kg\n木くず ¥30〜/kg",
         address: "埼玉県新座市大和田2-231-1",
         holiday: "土日祝(第二土曜日除く)",
         memo:"11:30〜13:00 持ち込み不可",
         contract:"",
-        location:{ lat: 35.8054, lng: 139.5425 }
+        personnel:"与儀 様",
+        location:{ lat: 35.805454, lng: 139.548950 }
         
     },
     { 
         name: "オネスト",
-        phone:"08065635300",
+        phone:"0335225300",
         hours: "平日／7：00～18：00\n日曜日・祝／10：00～17：00",
         rate: "混廃 ¥65〜/kg\n木くず ¥35/kg",
         address: "東京都江東区新木場4-3-26",
         holiday: "第二日曜日",
         memo:"日曜日事前予約制 「前日15:00までに予約必須」",
         contract:"",
-        location:{ lat: 35.643889, lng: 139.825833 }
-        
-    },
-    { 
-        name: "旭商会",
-        phone:"08023813608",
-        hours:"8:30〜16:30\n※全日・12:00〜13:00 持ち込み不可",
-        rate: "混廃 ¥40〜/kg\n木くず ¥30/kg",
-        address: "神奈川県相模原市中央区宮下本町3-28-14",
-        holiday: "土日祝",
-        memo:"全日事前予約制 「持込2日前に予約必須」",
-        contract:"",
-        location:{ lat: 35.5702, lng: 139.3607 }
+        personnel:"小林 様",
+        location:{ lat: 35.645157, lng: 139.838470 }
     },
     { 
         name: "東港金属",
-        phone:"07032439539",
+        phone:"0337901751",
         hours:"全日 00:00〜23:59（24時間営業）",
         rate: "混廃 ¥70〜/kg\n木くず ¥30/kg",
         address: "東京都大田区京浜島2-20-4",
         holiday: "年末年始",
         memo:"ー",
         contract:"",
-        location:{ lat: 35.5843, lng: 139.7394 }
-        
+        personnel:"森 様",
+        location:{ lat: 35.567535, lng: 139.766463 }
     },
     { 
         name: "亀田",
-        phone:"07050885760",
+        phone:"0336186023",
         hours:"8:30〜15:00\n※全日・12:00〜13:00 持ち込み不可",
         rate: "混廃 ¥75〜/kg\n木くず ¥30/kg",
         address: "東京都墨田区東墨田2-24-19",
         holiday: "土日祝",
         memo:"ー",
         contract:"",
-        location:{ lat: 35.7229, lng: 139.8338 }
+        personnel:"高橋 様",
+        location:{ lat: 35.722729, lng: 139.833832 }
+        
+    },
+    { 
+        name: "アール・イー・ハヤシ",
+        phone:"0334723054",
+        hours:"8:30〜16:30\n※全日・12:00〜13:00 持ち込み不可",
+        rate: "混廃 ¥70〜/kg\n木くず ¥30/kg",
+        address: "東京都大田区東糀谷1-7-1",
+        holiday: "年末年始のみ",
+        memo:"ー",
+        contract:"",
+        personnel:"沼下 様",
+        location:{ lat: 35.560459, lng: 139.742142 }
         
     }
 ];
@@ -184,7 +188,8 @@ function displayCompanies(userLocation) {
             <p>⚪︎休業日: ${company.holiday}</p>
             <p>⚪︎備考: ${company.memo}</p>            
             <p>⚪︎移動時間: ${company.duration || "計算中..."}</p>
-            <p>⚪︎契約書: ${company.contract}</p>            
+            <p>⚪︎契約書: ${company.contract}</p>     
+            <p>⚪︎担当者: ${company.personnel}</p>          
             <div id="map-${company.name}" style="width: 100%; height: 300px;"></div>
             <button onclick="callRequest('${company.phone}')">tel依頼</button> <!-- 電話ボタン -->
             <button onclick="openRoute('${company.name}', ${userLocation.lat}, ${userLocation.lng})">経路案内</button>
