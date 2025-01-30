@@ -14,7 +14,7 @@ const companies = [
         address: "埼玉県新座市大和田2-231-1",
         holiday: "土日祝(第二土曜日除く)",
         memo:"11:30〜13:00 持ち込み不可",
-        contract:"",
+        contract:"2025/1/31　電子契約送付済　宛先：contact@tokusou-tascat.com",
         personnel:"与儀 様",
         location:{ lat:35.808179558872375, lng: 139.54994368553108 }
         },
@@ -26,7 +26,7 @@ const companies = [
         address: "東京都江東区新木場4-3-26",
         holiday: "第二日曜日",
         memo:"日曜日事前予約制 「前日15:00までに予約必須」",
-        contract:"",
+        contract:"2025/1/31　電子契約送付済　宛先：contact@tokusou-tascat.com",
         personnel:"小林 様",
         location:{ lat:35.645324883816585, lng: 139.83876319650597 }
         },
