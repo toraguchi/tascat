@@ -65,7 +65,19 @@ const companies = [
         contract:"",
         personnel:"沼下 様",
         location:{ lat: 35.560442159460635, lng: 139.74225118300902 }
-        }
+        },
+        {
+            name: "有限会社谷口重機",
+            phone:"0334168206",
+            hours:"8:00〜17:30",
+            rate: "混廃 ¥14000〜/m3",
+            address: "東京都世田谷区大蔵6-20-29",
+            holiday: "日・祝日",
+            memo:"ー",
+            contract:"紙契約書（契約：持込後）",
+            personnel:"谷口 様",
+            location:{ lat:35.62500720709309,lng:139.607269909393}
+            }
 ];
 // 電話をかける
 function callRequest(companyName) {
